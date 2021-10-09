@@ -1,2 +1,0 @@
-# rubik-cube
-express app
