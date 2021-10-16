@@ -5,11 +5,10 @@ const homeController = require('./controllers/homeController.js');
 
 const router = express.Router();
 
-router.all('/', (req, res) => {
-    res.render('index');
-});
-
-router.use('/', homeController);
+router.use(homeController);
 router.use('/cube', cubeController);
+router.use('*', (req, res) => {
+	res.render('404');
+});
 
 module.exports = router;
