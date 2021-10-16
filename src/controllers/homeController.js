@@ -1,9 +1,12 @@
 const express = require('express');
+const cubeService = require('../services/cubeService');
 
 const router = express.Router();
 
 const home = (req, res) => {
-    res.render('index');
+    let cubes = cubeService.getAll();
+
+    res.render('index', { cubes });
 };
 
 router.get('/', home);
@@ -11,4 +14,4 @@ router.get('/', home);
 module.exports = router;
 
 // https://www.youtube.com/watch?v=ygNg-ts6Peo
-// 1,17,38
+// 2,00,26
