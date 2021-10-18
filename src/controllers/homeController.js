@@ -13,10 +13,22 @@ const about = (req, res) => {
 	res.render("about");
 };
 
+const search = (req, res) => {
+	console.log(req.query);
+
+	// let cubes = cubeService.search();
+
+	res.render("index");
+};
+
 router.get("/", home);
 router.get("/about", about);
+router.get("/search", search);
+
 
 module.exports = router;
 
 // https://www.youtube.com/watch?v=ygNg-ts6Peo
+router.get("/about", about);
 // 2,00,26
+// 2,47,40
