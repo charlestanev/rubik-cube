@@ -14,11 +14,13 @@ const about = (req, res) => {
 };
 
 const search = (req, res) => {
-	console.log(req.query);
+	// console.log(req.query);
 
-	// let cubes = cubeService.search();
+	let { search, from, to } = req.query;
 
-	res.render("index");
+	let cubes = cubeService.search(search, from, to);
+
+	res.render('index', { cubes });
 };
 
 router.get("/", home);
