@@ -20,7 +20,13 @@ const search = (req, res) => {
 
 	let cubes = cubeService.search(search, from, to);
 
-	res.render('index', { cubes });
+	res.render('index', {
+		title: 'SEARCH',
+		search,
+		from,
+		to,
+		cubes,
+	});
 };
 
 router.get("/", home);
@@ -33,4 +39,4 @@ module.exports = router;
 // https://www.youtube.com/watch?v=ygNg-ts6Peo
 router.get("/about", about);
 // 2,00,26
-// 2,47,40
+// 2,59,07
