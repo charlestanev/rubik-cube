@@ -36,7 +36,5 @@ router.get("/search", search);
 
 module.exports = router;
 
-// https://www.youtube.com/watch?v=ygNg-ts6Peo
+// https://www.youtube.com/watch?v=N3HLTRGssRY
 router.get("/about", about);
-// 2,00,26
-// 2,59,07

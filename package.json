@@ -13,7 +13,7 @@
     "dependencies": {
         "express": "^4.17.1",
         "express-handlebars": "^5.3.4",
-        "nodemon": "^2.0.13",
-        "uniqid": "^5.4.0"
+        "mongoose": "^6.0.12",
+        "nodemon": "^2.0.13"
     }
 }
