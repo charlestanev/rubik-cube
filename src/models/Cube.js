@@ -24,7 +24,7 @@ const cubeSchema = new mongoose.Schema({
 			message: 'Image Url is Invalid!'
 		}
 	},
-	difficultyLevel: {
+	difficulty: {
 		type: Number,
 		required: true,
 		min: 1,

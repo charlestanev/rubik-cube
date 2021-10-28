@@ -1,16 +1,16 @@
-const express = require("express");
-const cubeService = require("../services/cubeService");
+const express = require('express');
+const cubeService = require('../services/cubeService');
 
 const router = express.Router();
 
-const home = (req, res) => {
-	let cubes = cubeService.getAll();
+const home = async (req, res) => {
+	let cubes = await cubeService.getAll();
 
-	res.render("index", { cubes });
+	res.render('index', { cubes });
 };
 
 const about = (req, res) => {
-	res.render("about");
+	res.render('about');
 };
 
 const search = (req, res) => {
@@ -29,12 +29,12 @@ const search = (req, res) => {
 	});
 };
 
-router.get("/", home);
-router.get("/about", about);
-router.get("/search", search);
+router.get('/', home);
+router.get('/about', about);
+router.get('/search', search);
 
 
 module.exports = router;
 
 // https://www.youtube.com/watch?v=N3HLTRGssRY
-router.get("/about", about);
+router.get('/about', about);
