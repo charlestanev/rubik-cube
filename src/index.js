@@ -22,3 +22,7 @@ initDatabase(config.DB_CONNECTION_STRING)
 	.catch((err) => {
 		console.log('Application init failed: ', err);
 	})
+
+
+
+// https://www.youtube.com/watch?v=N3HLTRGssRY

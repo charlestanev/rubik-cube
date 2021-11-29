@@ -1,8 +1,7 @@
-const express = require("express");
+const router = require('express').Router();
 
 const cubeService = require("../services/cubeService.js");
 
-const router = express.Router();
 
 const getCreateCubePage = (req, res) => {
 	res.render('create');
@@ -15,7 +14,7 @@ const createCube = async (req, res) => {
 		await cubeService.create(name, description, imageUrl, difficulty);
 		res.redirect('/');
 	} catch (error) {
-		res.status(400).json({ message: 'Could not create cube!', error });
+		res.status(400).send(error.message).end();
 	}
 };
 

@@ -36,5 +36,4 @@ router.get('/search', search);
 
 module.exports = router;
 
-// https://www.youtube.com/watch?v=N3HLTRGssRY
 router.get('/about', about);
