@@ -5,7 +5,7 @@ const cubeService = require("../services/cubeService.js");
 const cubeAccessoryController = require("./cubeAccessoryController.js");
 
 const getCreateCubePage = (req, res) => {
-	res.render('create');
+	res.render('cube/create');
 };
 
 const createCube = async (req, res) => {
