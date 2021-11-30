@@ -29,7 +29,13 @@ const cubeSchema = new mongoose.Schema({
 		required: true,
 		min: 1,
 		max: 5,
-	}
+	},
+	accessories: [
+		{
+			type: mongoose.Types.ObjectId,
+			ref: 'Accessory',
+		}
+	]
 });
 
 // // 3-th way to validate:
